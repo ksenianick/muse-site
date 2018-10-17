@@ -1,0 +1,237 @@
+html {
+    background: url(../images/background/about-background.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #232323;
+    color: #cdcdcd;
+    font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+a:hover {
+    color: #f9f9f9;
+}
+
+.nav {
+    background: black;
+    height: 70px;
+}
+
+.menu-dropdown {
+    display: block;
+    position: relative;
+    top: 22px;
+    left: 22px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.burger {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+}
+
+.a-line {
+    display: block;
+    width: 43px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: white;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+        opacity 0.55s ease;
+}
+
+.menu-hidden {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    background: black;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+.menu-hidden li {
+    padding: 5px 0;
+    font-size: 22px;
+    color: white;
+}
+
+/* Burger transformation logic START*/
+.menu-dropdown .a-line:first-child {
+    transform-origin: 0% 0%;
+}
+
+.menu-dropdown .a-line:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+/*Transform all the slices of hamburger into a crossmark.*/
+.menu-dropdown .burger:checked~.a-line {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+}
+
+/*Hide the middle one.*/
+.menu-dropdown .burger:checked~.a-line:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*The last one should go the other direction*/
+.menu-dropdown .burger:checked~.a-line:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*Make this absolute positioned at the top left of the screen*/
+.menu-dropdown .burger:checked~ul {
+    transform: none;
+}
+
+/* Burger transformation logic END*/
+.logo {
+    no-repeat center center fixed;
+    margin-top: 5px;
+    margin-left: 470px;
+    padding: 0;
+}
+
+/* .about-main {
+    display: block;
+    margin-top: 400px;
+    margin-left: 100px;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 200px;
+    height: 200px; */
+/* .css-box {} */
+.wrapper {
+    width: 1000px;
+    height: 730px;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-top: 40px;
+    margin-left: 140px;
+    float: left;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.a-line-heading {
+    display: block;
+    width: 910px;
+    height: 3px;
+    margin-bottom: 5px;
+    position: relative;
+    background: white;
+    border-radius: 3px;
+}
+
+.main-heading {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-transform: capitalize;
+}
+
+.subheading {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding-top: 30px;
+}
+
+.unordered-list {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    text-align: left;
+    list-style-type: none;
+    padding: 0;
+    margin: 0
+}
+
+.about {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    color: white;
+    text-align: left;
+    padding-top: 20px 5px;
+    margin-top: 10px;
+}
+
+.align-image {
+    padding: 5px 10px 0 0;
+    float:left;
+}
+
+/* Table for Tour Dates START*/
+.tour-date-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    text-align: left;
+    padding: 8px;
+}
+
+.ticket-class {
+    color: #30B5EF;
+}
+
+.date {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: 58px;
+    text-align: right;
+}
+
+.month-year {
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    color: #30B5EF;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.border-right {
+    border-right: 1px white solid !important;
+    height: 2.5em;
+}
+
+.height25 {
+    height: 2.5em;
+}
+/* Table for Tour Dates END*/
