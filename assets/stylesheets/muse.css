@@ -1,19 +1,54 @@
 html {
-    background: url(../images/background/about-background.png) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    height: 100%;
     margin: 0;
     padding: 0;
 }
 
 body {
+    height: 100%;
     margin: 0;
     padding: 0;
     background: #232323;
     color: #cdcdcd;
     font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+.bg-img-wrapper {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top !important;
+    background-attachment: fixed;
+}
+
+.bg-img-index {
+    background-image: url(../images/background/home-background.jpg);
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-img-about {
+    background: url(../images/background/about-background.png);
+    min-height: 900px;
+}
+
+.bg-img-tour-dates {
+    background: url(../images/background/tour-dates-background.jpg);
+    min-height: 900px;
+}
+
+.bg-img-discography {
+    background: url(../images/background/discography-background.jpg);
+    min-height: 700px;
+}
+
+.bg-img-home {
+    background: url(../images/background/home-background.jpg);
+    min-height: 700px;
 }
 
 a:hover {
@@ -23,6 +58,12 @@ a:hover {
 .nav {
     background: black;
     height: 70px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 .menu-dropdown {
@@ -119,9 +160,27 @@ a:hover {
 /* Burger transformation logic END*/
 .logo {
     no-repeat center center fixed;
-    margin-top: 5px;
-    margin-left: 470px;
+    /* margin-top: 5px;
+    margin-left: 470px; */
+    margin-top: 4px;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: 40%;
     padding: 0;
+}
+
+.preorder {
+    float: right;
+    padding-top: 12px;
+    padding-right: 6px;
+    text-align: right;
+}
+
+.album {
+    padding-top: 9px !important;
+    margin-right: 22px;
+    float: right;
+    /* padding-left: 1030px !important; */
 }
 
 /* .about-main {
@@ -134,7 +193,7 @@ a:hover {
 /* .css-box {} */
 .wrapper {
     width: 1000px;
-    height: 730px;
+    min-height: 730px;
     background-color: rgba(0, 0, 0, 0.7);
     margin-top: 40px;
     margin-left: 140px;
@@ -142,6 +201,8 @@ a:hover {
     padding: 40px;
     box-sizing: border-box;
 }
+
+
 
 .a-line-heading {
     display: block;
@@ -190,7 +251,7 @@ a:hover {
 
 .align-image {
     padding: 5px 10px 0 0;
-    float:left;
+    float: left;
 }
 
 /* Table for Tour Dates START*/
@@ -202,6 +263,7 @@ a:hover {
 td {
     text-align: left;
     padding: 8px;
+    color: white;
 }
 
 .ticket-class {
@@ -229,9 +291,65 @@ td {
 .border-right {
     border-right: 1px white solid !important;
     height: 2.5em;
+    color: white;
 }
 
 .height25 {
     height: 2.5em;
 }
+
 /* Table for Tour Dates END*/
+/* Home Page */
+.sm-photo {
+    width: 50px !important;
+}
+
+.social-media {
+    padding-top: 34em;
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+.background-photo {
+    width: 1300px !important;
+}
+
+/* discography START */
+.album-cover {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.album-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    color: white;
+    text-align: left;
+    list-style-type: none;
+}
+
+.songs-left {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    color: white;
+    text-align: left;
+}
+
+.songs-right {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    color: white;
+    text-align: left;
+    padding-top: 136px;
+}
+
+.release-date {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    color: white;
+    text-align: left;
+    line-height: 2;
+    padding-top: 5em;
+}
