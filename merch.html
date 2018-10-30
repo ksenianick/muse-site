@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Merch | Muse</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="./assets/stylesheets/muse.css" rel="stylesheet" />
+</head>
+
+<body class="bg-img-wrapper bg-img-merch clearfix">
+    <nav class="nav clearfix">
+        <div class="menu-dropdown">
+            <input type="checkbox" class="burger" />
+            <div class="a-line"></div>
+            <div class="a-line"></div>
+            <div class="a-line"></div>
+
+            <ul class="menu-hidden">
+                <a href="index.html"><li>Home</li></a>
+                <a href="about.html"><li>About</li></a>
+                <a href="discography.html"><li>Discography</li></a>
+                <a href="media.html"><li>Media</li></a>
+                <a href="merch.html"><li>Merch</li></a>
+                <a href="tour-dates.html"><li>Tour Dates</li></a>
+            </ul>
+        </div>
+
+        <div class="logo">
+            <a href="index.html">
+            <img src="./assets/images/muse-logo.png" alt="Muse Logo"/>
+        </a>
+    </div>
+            <div class="preorder">
+                SIMULATION THEORY <br /> PRE-ORDER NOW
+    </div>
+
+                <div class="album"><a href="https://simulationtheory.muse.mu">
+                    <img src="./assets/images/body-photos/simulation-theory.png" alt="Simulation Theory Album"/></a>
+                </div>
+    </nav>
+    <div>
+        <section class="wrapper">
+            <div class="a-line-heading"></div>
+            <h1 class="main-heading">MERCH</h1>
+
+
+            <div class="about">
+
+                <div id="myBtnContainer">
+                    <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+                    <button class="btn" onclick="filterSelection('tshirt')"> T-Shirts</button>
+                    <button class="btn" onclick="filterSelection('other')"> Other</button>
+                    <button class="btn" onclick="filterSelection('hat')"> Hats</button>
+                    <button class="btn" onclick="filterSelection('hoodie')"> Hoodies</button>
+                </div>
+
+                <div class="container">
+                  <div class="filterDiv tshirt">
+                <img src="./assets/images/merch/muse-tshirt-1.jpg"/>
+                  </div>
+                  <div class="filterDiv tshirt">
+                <img src="./assets/images/merch/muse-tshirt-2.jpg"/>
+                  </div>
+                  <div class="filterDiv tshirt">
+                <img src="./assets/images/merch/muse-tshirt-3.jpg"/>
+                  </div>
+                  <div class="filterDiv other">
+                     <img src="./assets/images/merch/muse-other-1.jpg"/>
+                  </div>
+                  <div class="filterDiv other">
+                     <img src="./assets/images/merch/muse-other-2.jpg"/>
+                  </div>
+                  <div class="filterDiv hoodie">
+                 <img src="./assets/images/merch/muse-hoodie-1.jpg"/>
+                  </div>
+                  <div class="filterDiv hoodie">
+                 <img src="./assets/images/merch/muse-hoodie-2.jpg"/>
+                  </div>
+                  <div class="filterDiv hat">
+                 <img src="./assets/images/merch/muse-hat-1.jpg"/>
+                  </div>
+                  <div class="filterDiv hat">
+                 <img src="./assets/images/merch/muse-hat-2.jpg"/>
+                  </div>
+                </div>
+
+
+
+            </div>
+        </section>
+    </div>
+    <script>
+    filterSelection("all")
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("filterDiv");
+      if (c == "all") c = "";
+      // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+
+    // Show filtered elements
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {
+          element.className += " " + arr2[i];
+        }
+      }
+    }
+
+    // Hide elements that are not selected
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+
+    // Add active class to the current control button (highlight it)
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function() {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+
+    </script>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+
+</html>
