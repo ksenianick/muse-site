@@ -204,7 +204,7 @@ a:hover {
 /* .css-box {} */
 .wrapper {
     width: 1000px;
-    min-height: 730px;
+    min-height: 790px;
     background-color: rgba(0, 0, 0, 0.7);
     margin-top: 40px;
     margin-left: 140px;
@@ -239,6 +239,7 @@ a:hover {
     font-weight: bold;
     color: white;
     padding-top: 30px;
+    margin-bottom: 5px;
 }
 
 .unordered-list {
@@ -327,8 +328,10 @@ td {
 
 /* discography START */
 .album-cover {
-    padding-top: 20px;
     padding-bottom: 20px;
+}
+.album-container {
+    padding-top: 20px;
 }
 
 .album-title {
@@ -343,8 +346,17 @@ td {
     font-family: 'Raleway', sans-serif;
     font-size: 18px;
     line-height: 1.5;
+    width: 100%;
     color: white;
-    text-align: left;
+    /* text-align: left; */
+    margin: 0 0 10px 5px;
+}
+
+.songs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 30px;
 }
 
 .songs-right {
@@ -352,8 +364,15 @@ td {
     font-size: 18px;
     line-height: 1.5;
     color: white;
-    text-align: left;
-    padding-top: 136px;
+    width: 100%;
+    /* text-align: left; */
+    /* padding-top: 100px; */
+    margin: 64px 5px 10px 25px;
+    padding-right: 20px;
+}
+
+.songs-left > li,
+.songs-right > li {
 }
 
 .release-date {
@@ -362,7 +381,6 @@ td {
     color: white;
     text-align: left;
     line-height: 2;
-    padding-top: 5em;
 }
 
 
@@ -505,3 +523,25 @@ margin: 10px;
         justify-content: center;
         flex-direction: column;
     }
+
+
+.listing-left {
+display: block;
+float: left;
+width: auto;
+    }
+
+.listing-right {
+    display: block;
+    float: right;
+    width: auto;
+}
+
+
+.li {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+padding: 5px;
+border-bottom: 1px solid #eee;
+}
