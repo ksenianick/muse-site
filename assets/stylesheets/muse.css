@@ -62,8 +62,12 @@ a:hover {
     color: #f9f9f9;
 }
 
+a {
+color: white;
+}
+
 .nav {
-    background: black;
+    background: #0a0a0a;
     height: 70px;
 }
 
@@ -98,7 +102,7 @@ a:hover {
 
 .a-line {
     display: block;
-    width: 43px;
+    width: 34px;
     height: 4px;
     margin-bottom: 5px;
     position: relative;
@@ -181,6 +185,8 @@ a:hover {
     padding-top: 12px;
     padding-right: 6px;
     text-align: right;
+    color: #30b5ef;
+
 }
 
 .album {
@@ -202,13 +208,14 @@ a:hover {
     width: 200px;
     height: 200px; */
 /* .css-box {} */
+
 .wrapper {
-    width: 1000px;
+    max-width: 1000px;
+    width: 100%;
     min-height: 790px;
-    background-color: rgba(0, 0, 0, 0.7);
-    margin-top: 40px;
-    margin-left: 140px;
-    float: left;
+    background-color: rgba(0, 0, 0, 0.85);
+    margin: 40px auto auto auto;
+    /* float: left; */
     padding: 40px;
     box-sizing: border-box;
 }
@@ -231,14 +238,26 @@ a:hover {
     font-weight: bold;
     color: white;
     text-transform: capitalize;
+    margin-bottom: 0;
 }
+
+.main-heading2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: 0;
+    padding-bottom: 25px;
+}
+
 
 .subheading {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
     font-weight: bold;
-    color: white;
-    padding-top: 30px;
+    color: #30b5ef;
+    padding-top: 20px;
     margin-bottom: 5px;
 }
 
@@ -257,13 +276,16 @@ a:hover {
     font-size: 18px;
     color: white;
     text-align: left;
-    padding-top: 20px 5px;
+    padding: 20px 5px;
     margin-top: 10px;
 }
 
-.align-image {
+.about-image-wrapper {
     padding: 5px 10px 0px 0px;
     float: left;
+}
+.about-image {
+    max-height: 168px;
 }
 
 /* Table for Tour Dates START*/
@@ -280,6 +302,7 @@ td {
 
 .ticket-class {
     color: #30B5EF;
+    min-width: 6em;
 }
 
 .date {
@@ -291,7 +314,7 @@ td {
 
 .month-year {
     text-align: left;
-    padding: 0;
+    padding: 10px 0 0 0;
     margin: 0;
     color: #30B5EF;
     font-weight: bold;
@@ -303,7 +326,8 @@ td {
 .border-right {
     border-right: 1px white solid !important;
     height: 2.5em;
-    color: white;
+    /* max-width: 15em; */
+    /* color: white; */
 }
 
 .height25 {
@@ -337,7 +361,7 @@ td {
 .album-title {
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
-    color: white;
+    color: #30b5ef;
     text-align: left;
     list-style-type: none;
 }
@@ -397,6 +421,10 @@ td {
       display: none; /* Hidden by default */
   }
 
+.filterDiv:hover {
+cursor: not-allowed;
+
+}
   /* The "show" class is added to the filtered elements */
   .show {
       display: block;
@@ -408,8 +436,9 @@ td {
     border: none;
     outline: none;
     padding: 12px 16px;
-    background-color: none;
     cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #30b5ef;
   }
 
   /* Add a light grey background on mouse-over */
@@ -419,8 +448,8 @@ td {
 
   /* Add a dark background to the active button */
   .btn.active {
-    background-color: #666;
-    color: white;
+    /* background-color: #666; */
+    color: #30b5ef;
   }
 
   .filterDiv img {
@@ -466,6 +495,7 @@ margin: 10px;
   flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin-top:  25px;
 }
 
 .media-card-wrapper {
@@ -535,6 +565,7 @@ width: auto;
     display: block;
     float: right;
     width: auto;
+    color: white;
 }
 
 
@@ -544,4 +575,8 @@ flex-direction: row;
 justify-content: space-between;
 padding: 5px;
 border-bottom: 1px solid #eee;
+}
+
+.merch-button-wrapper {
+    text-align: center;
 }
