@@ -20,6 +20,7 @@ body {
     background-attachment: fixed;
 }
 
+
 .bg-img-index {
     background-image: url(../images/background/home-background.jpg);
     height: 100%;
@@ -212,7 +213,7 @@ color: white;
 .wrapper {
     max-width: 1000px;
     width: 100%;
-    min-height: 790px;
+    min-height: 840px;
     background-color: rgba(0, 0, 0, 0.85);
     margin: 40px auto auto auto;
     /* float: left; */
@@ -220,7 +221,9 @@ color: white;
     box-sizing: border-box;
 }
 
-
+.a-preorder{
+    color: #30b5ef;
+}
 
 .a-line-heading {
     display: block;
