@@ -213,7 +213,7 @@ color: white;
 .wrapper {
     max-width: 1000px;
     width: 100%;
-    min-height: 840px;
+    min-height: 810px;
     background-color: rgba(0, 0, 0, 0.85);
     margin: 40px auto auto auto;
     /* float: left; */
@@ -280,6 +280,14 @@ color: white;
     color: white;
     text-align: left;
     padding: 20px 5px;
+    margin-top: 10px;
+}
+
+.merch-buttons {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    color: white;
+    text-align: left;
     margin-top: 10px;
 }
 
